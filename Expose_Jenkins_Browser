@@ -1,0 +1,4 @@
+Disable Firewall
+  systemctl disable firewalld
+SELinux to Permisive
+  setenforce 0
