@@ -1,0 +1,16 @@
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+sudo yum upgrade
+
+dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+dnf install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm
+
+sudo yum install epel-release java-11-openjdk-devel
+
+sudo yum install jenkins
+
+sudo systemctl daemon-reload
